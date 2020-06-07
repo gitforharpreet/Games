@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Snakes & Ladders</title>
+	</head>
+	<body onload="onLoad()">
+		<div id="main_div">
+			<div id="header">
+				<h2 id="page_head">Invisible Snakes & Ladders</h2>
+			</div>
+			<div id="game_div">
+				<div id="board_div">
+					<div id="player_mode_div" class="card_layout">
+						<label class="head_label">Select Player Mode</label>
+						<div id="player_mode_input_div">
+							<input
+								type="radio"
+								id="mode_single"
+								name="mode"
+								value="single"
+							/>
+							<label for="mode_single">Single</label>
+							<input
+								type="radio"
+								id="mode_multiple"
+								name="mode"
+								value="multiple"
+							/>
+							<label for="mode_multiple">Multiple</label>
+						</div>
+						<button
+							id="next_btn"
+							class="btn_class"
+							onclick="showNext();"
+						>
+							Next
+						</button>
+					</div>
+					<div
+						id="player_details_div"
+						class="card_layout"
+						style="display: none;"
+					>
+						<label>Enter Player Name</label>
+						<div>
+							<input
+								type="input"
+								id="input_player1"
+								name="name_player1"
+								placeholder="Player1"
+								required
+								minlength="2"
+								maxlength="7"
+								required
+							/>
+
+							<input
+								type="input"
+								id="input_player2"
+								name="name_plater2"
+								placeholder="Player2"
+								required
+								minlength="2"
+								maxlength="7"
+							/>
+						</div>
+						<button
+							class="btn_class"
+							id="launch_btn"
+							onclick="launchGame();"
+						>
+							Launch Game
+						</button>
+					</div>
+					<div id="steps_div" style="display: none;"></div>
+				</div>
+				<div id="score_div" style="display: none;">
+					<div id="score_details_div">
+						<div id="player_names_div">
+							<div id="player1_name" class="player_class"></div>
+							<div id="player1_score">qfdwfaf</div>
+							<div id="player2_name" class="player_class"></div>
+							<div id="player2_score"></div>
+						</div>
+					</div>
+					<div id="dice_div">
+						<a href="#"
+							><div id="dice" onclick="rollDice();">
+								<h2 id="dice_play_id" class="dice_play">
+									Play!!
+								</h2>
+							</div></a
+						>
+						<p id="dice_output"></p>
+					</div>
+					<div id="token_div">
+						<div id="token_player1"></div>
+						<div id="token_player2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>

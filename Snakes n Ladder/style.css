@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body {
+	background-image: linear-gradient(
+		to left,
+		rgba(170, 25, 141, 1),
+		rgba(201, 193, 156, 1)
+	);
+	color: white;
+	text-align: center;
+	margin: auto;
+	font-family: 'Righteous', cursive;
+}
+
+#main_div {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#header {
+	width: 100%;
+	height: 5vh;
+	position: fixed;
+	text-align: center;
+	z-index: 999;
+}
+
+#page_head {
+	padding: none;
+	margin: 0px;
+	font-size: 30px;
+	animation: h2blinker 2s alternate-reverse infinite;
+}
+
+#landing_img {
+	width: 500px;
+	height: 400px;
+}
+
+@keyframes h2blinker {
+	from {
+		color: yellow;
+	}
+	to {
+		color: black;
+	}
+}
+
+#landing_page_h2 {
+	animation: h2blinker 2s alternate-reverse infinite;
+	font-size: 40px;
+}
+
+#game_div {
+	width: 100vw;
+	padding: none;
+	height: 90vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-basis: auto;
+	padding-top: 80px;
+	justify-content: space-between;
+	margin: 0px;
+	margin-top: -40px;
+}
+
+#board_div {
+	width: 80vw;
+	height: 100%;
+	padding: none;
+}
+
+#steps_div {
+	width: 70%;
+	display: flex;
+	margin: auto;
+	margin-top: 20px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	border: 5px solid black;
+	border-radius: 1%;
+}
+
+.board_class {
+	color: rgb(68, 59, 62);
+	width: 65px;
+	height: 45px;
+	background-color: rgba(201, 193, 156, 1);
+	border: 2.5px solid rgb(77, 75, 75);
+	text-align: center;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#score_div {
+	width: 20vw;
+	height: 90vh;
+	padding: none;
+	margin: 0px;
+	margin-left: -20px;
+	background-image: linear-gradient(90deg, #d0f105, white);
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#score_details_div {
+	width: 100%;
+	height: 50%;
+	margin: auto;
+}
+
+#dice_div {
+	height: 40%;
+	width: 100%;
+}
+
+#dice_div a {
+	text-decoration: none;
+}
+
+#token_div {
+	height: 10%;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+}
+
+.token {
+	height: 35px;
+}
+
+#player_names_div {
+	height: 70%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-size: 20px;
+}
+
+.player_class {
+	background-color: darkorange;
+	color: black;
+}
+
+#dice_output {
+	color: black;
+	margin-top: 30px;
+	word-wrap: break-word;
+	z-index: 999;
+}
+
+@keyframes dicee_animate {
+	0%,
+	100% {
+		transform: translate(0);
+	}
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: rotate(180deg);
+	}
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: rotate(360deg);
+	}
+}
+
+#dice {
+	width: 70px;
+	height: 70px;
+	background-color: darkorange;
+	border-radius: 20%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: auto;
+	color: black;
+	font-size: 14px;
+}
+
+.hidden {
+	display: none;
+}
+
+.dice_animate {
+	pointer-events: none;
+	animation: dicee_animate;
+	animation-duration: 1.5s;
+}
+
+.dice_dot {
+	width: 8px;
+	height: 8px;
+	background-color: white;
+	border-radius: 50%;
+	margin: auto;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+#roll_dice {
+	margin-top: auto;
+}
+
+.card_layout {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	margin-top: 100px;
+	margin-left: 500px;
+	background-color: #c8d66d;
+	border: 2px solid rgba(170, 25, 141, 1);
+	border-radius: 3%;
+	color: black;
+	font-size: 30px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#player_mode_input_div {
+	font-size: 0.7em;
+}
+
+#player_details_div input {
+	padding: 5px 5px;
+	font-size: 16px;
+}
+
+.btn_class {
+	border: none;
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 2px;
+	cursor: pointer;
+	background-color: rgba(170, 25, 141, 1);
+	color: white;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+@keyframes snake_tilt {
+	from {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(-10deg);
+	}
+
+	50% {
+		transform: rotate(10deg);
+	}
+
+	75% {
+		transform: rotate(-10deg);
+	}
+
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+.flashing_board {
+	color: rgb(21, 0, 255);
+	animation: blinker 2s linear infinite;
+}
+
+.btn_class:hover {
+	background-color: rgb(253, 112, 225);
+	color: black;
+}
