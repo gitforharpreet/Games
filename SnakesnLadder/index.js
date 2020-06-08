@@ -149,7 +149,7 @@ const setPlayerColors = () => {
  */
 const createTokenWithColor = (color) => {
 	const player1Img = document.createElement('img');
-	player1Img.setAttribute('src', '/images/' + color + '.png');
+	player1Img.setAttribute('src', '/images/' + color + '.PNG');
 	player1Img.setAttribute('id', color);
 	player1Img.classList.add('token');
 	return player1Img;
