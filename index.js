@@ -151,9 +151,8 @@ const createTokenWithColor = (color) => {
 	const player1Img = document.createElement('img');
 	player1Img.setAttribute(
 		'src',
-		'https://gitforharpreet.github.io/Games/SnakesnLadder/images/' +
-			color +
-			'.png'
+		'https://gitforharpreet.github.io/SnakesnLadder/images/' +
+			color + '.png'
 	);
 	player1Img.setAttribute('id', color);
 	player1Img.classList.add('token');
